@@ -98,7 +98,6 @@ namespace lab2
                             sqlInsertCommand3.Parameters["@CompanyName"].Value = txbCompName.Text;
                             sqlInsertCommand3.Parameters["@CompanyPhone"].Value = mtbPhone.Text;
                             sqlInsertCommand3.Parameters["@CompanySite"].Value = txbSite.Text;
-
                             if (sqlInsertCommand3.ExecuteNonQuery() != 1)
                             {
                                 lblErrorComp.Text = "Такой сайт уже существует";

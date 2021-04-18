@@ -99,6 +99,7 @@ namespace lab2
             this.getCompanyBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.CompDataSet = new lab2.employeesDataSet5();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.label17 = new System.Windows.Forms.Label();
             this.cmbProf = new System.Windows.Forms.ComboBox();
             this.label16 = new System.Windows.Forms.Label();
             this.cmbEmp = new System.Windows.Forms.ComboBox();
@@ -116,6 +117,33 @@ namespace lab2
             this.getEmployeeProfBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.EmpProfDataSet = new lab2.employeesDataSet6();
             this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.cmbEmpl = new System.Windows.Forms.ComboBox();
+            this.cmbSch = new System.Windows.Forms.ComboBox();
+            this.cmbLoc = new System.Windows.Forms.ComboBox();
+            this.numSalComp = new System.Windows.Forms.NumericUpDown();
+            this.cmpProf = new System.Windows.Forms.ComboBox();
+            this.cmdComp = new System.Windows.Forms.ComboBox();
+            this.dgvCompProf = new System.Windows.Forms.DataGridView();
+            this.companyNameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.companyEmailDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.companyPhoneDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.companySiteDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.jobNameDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.currencyDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.educationDataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.industryDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.employmentDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.locationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.salaryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.scheduleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.getCompanyProfBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.CompProfDataSet = new lab2.employeesDataSet7();
             this.sqlSelectCommand2 = new System.Data.SqlClient.SqlCommand();
             this.sqlInsertCommand2 = new System.Data.SqlClient.SqlCommand();
             this.sqlUpdateCommand2 = new System.Data.SqlClient.SqlCommand();
@@ -140,40 +168,12 @@ namespace lab2
             this.sqlDeleteCommand4 = new System.Data.SqlClient.SqlCommand();
             this.sqlDataEmpProf = new System.Data.SqlClient.SqlDataAdapter();
             this.getEmployeeProfTableAdapter = new lab2.employeesDataSet6TableAdapters.GetEmployeeProfTableAdapter();
-            this.label17 = new System.Windows.Forms.Label();
             this.sqlSelectCommand5 = new System.Data.SqlClient.SqlCommand();
             this.sqlInsertCommand5 = new System.Data.SqlClient.SqlCommand();
             this.sqlUpdateCommand5 = new System.Data.SqlClient.SqlCommand();
             this.sqlDeleteCommand5 = new System.Data.SqlClient.SqlCommand();
             this.sqlDataCompProf = new System.Data.SqlClient.SqlDataAdapter();
-            this.dgvCompProf = new System.Windows.Forms.DataGridView();
-            this.CompProfDataSet = new lab2.employeesDataSet7();
-            this.getCompanyProfBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.getCompanyProfTableAdapter = new lab2.employeesDataSet7TableAdapters.GetCompanyProfTableAdapter();
-            this.companyNameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.companyEmailDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.companyPhoneDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.companySiteDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.jobNameDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.currencyDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.educationDataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.industryDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.employmentDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.locationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.salaryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.scheduleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cmdComp = new System.Windows.Forms.ComboBox();
-            this.cmpProf = new System.Windows.Forms.ComboBox();
-            this.numSalComp = new System.Windows.Forms.NumericUpDown();
-            this.cmbLoc = new System.Windows.Forms.ComboBox();
-            this.cmbSch = new System.Windows.Forms.ComboBox();
-            this.cmbEmpl = new System.Windows.Forms.ComboBox();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmployee)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.getEmployeeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeesDataSet1)).BeginInit();
@@ -194,11 +194,11 @@ namespace lab2
             ((System.ComponentModel.ISupportInitialize)(this.getEmployeeProfBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.EmpProfDataSet)).BeginInit();
             this.tabPage5.SuspendLayout();
-            this.toolStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCompProf)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CompProfDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.getCompanyProfBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numSalComp)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCompProf)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.getCompanyProfBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CompProfDataSet)).BeginInit();
+            this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // sqlSelectCommand1
@@ -841,6 +841,15 @@ namespace lab2
             this.tabPage4.Text = "Работники";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(218, 27);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(65, 13);
+            this.label17.TabIndex = 4;
+            this.label17.Text = "Профессия";
+            // 
             // cmbProf
             // 
             this.cmbProf.DataSource = this.getProfessionBindingSource;
@@ -989,6 +998,250 @@ namespace lab2
             this.tabPage5.Tag = "4";
             this.tabPage5.Text = "Работа";
             this.tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(728, 24);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(60, 13);
+            this.label23.TabIndex = 12;
+            this.label23.Text = "Занятость";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(587, 24);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(45, 13);
+            this.label22.TabIndex = 11;
+            this.label22.Text = "График";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(454, 24);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(82, 13);
+            this.label21.TabIndex = 10;
+            this.label21.Text = "Расположение";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(292, 24);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(44, 13);
+            this.label20.TabIndex = 9;
+            this.label20.Text = "Оплата";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(154, 24);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(65, 13);
+            this.label19.TabIndex = 8;
+            this.label19.Text = "Профессия";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(16, 24);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(58, 13);
+            this.label18.TabIndex = 7;
+            this.label18.Text = "Компания";
+            // 
+            // cmbEmpl
+            // 
+            this.cmbEmpl.FormattingEnabled = true;
+            this.cmbEmpl.Items.AddRange(new object[] {
+            "Полная ставка",
+            "Полставки",
+            "Четверть ставки"});
+            this.cmbEmpl.Location = new System.Drawing.Point(728, 55);
+            this.cmbEmpl.Name = "cmbEmpl";
+            this.cmbEmpl.Size = new System.Drawing.Size(121, 21);
+            this.cmbEmpl.TabIndex = 6;
+            // 
+            // cmbSch
+            // 
+            this.cmbSch.FormattingEnabled = true;
+            this.cmbSch.Items.AddRange(new object[] {
+            "2/2",
+            "5/2",
+            "3/3",
+            "40/40",
+            "Свободный"});
+            this.cmbSch.Location = new System.Drawing.Point(587, 55);
+            this.cmbSch.Name = "cmbSch";
+            this.cmbSch.Size = new System.Drawing.Size(121, 21);
+            this.cmbSch.TabIndex = 5;
+            // 
+            // cmbLoc
+            // 
+            this.cmbLoc.FormattingEnabled = true;
+            this.cmbLoc.Items.AddRange(new object[] {
+            "Иркусткая область",
+            "Московская область",
+            "Ленинградская область",
+            "Красноярский край",
+            "Калиниградская область",
+            "Новосибирская область"});
+            this.cmbLoc.Location = new System.Drawing.Point(439, 55);
+            this.cmbLoc.Name = "cmbLoc";
+            this.cmbLoc.Size = new System.Drawing.Size(121, 21);
+            this.cmbLoc.TabIndex = 4;
+            // 
+            // numSalComp
+            // 
+            this.numSalComp.Location = new System.Drawing.Point(283, 56);
+            this.numSalComp.Maximum = new decimal(new int[] {
+            150000,
+            0,
+            0,
+            0});
+            this.numSalComp.Minimum = new decimal(new int[] {
+            5000,
+            0,
+            0,
+            0});
+            this.numSalComp.Name = "numSalComp";
+            this.numSalComp.Size = new System.Drawing.Size(120, 20);
+            this.numSalComp.TabIndex = 3;
+            this.numSalComp.Value = new decimal(new int[] {
+            5000,
+            0,
+            0,
+            0});
+            // 
+            // cmpProf
+            // 
+            this.cmpProf.DataSource = this.getProfessionBindingSource;
+            this.cmpProf.DisplayMember = "JobName";
+            this.cmpProf.FormattingEnabled = true;
+            this.cmpProf.Location = new System.Drawing.Point(142, 56);
+            this.cmpProf.Name = "cmpProf";
+            this.cmpProf.Size = new System.Drawing.Size(121, 21);
+            this.cmpProf.TabIndex = 2;
+            this.cmpProf.ValueMember = "id";
+            // 
+            // cmdComp
+            // 
+            this.cmdComp.DataSource = this.getCompanyBindingSource;
+            this.cmdComp.DisplayMember = "CompanyName";
+            this.cmdComp.FormattingEnabled = true;
+            this.cmdComp.Location = new System.Drawing.Point(3, 55);
+            this.cmdComp.Name = "cmdComp";
+            this.cmdComp.Size = new System.Drawing.Size(121, 21);
+            this.cmdComp.TabIndex = 1;
+            this.cmdComp.ValueMember = "idCompany";
+            // 
+            // dgvCompProf
+            // 
+            this.dgvCompProf.AutoGenerateColumns = false;
+            this.dgvCompProf.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCompProf.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.companyNameDataGridViewTextBoxColumn1,
+            this.companyEmailDataGridViewTextBoxColumn1,
+            this.companyPhoneDataGridViewTextBoxColumn1,
+            this.companySiteDataGridViewTextBoxColumn1,
+            this.jobNameDataGridViewTextBoxColumn2,
+            this.currencyDataGridViewTextBoxColumn2,
+            this.educationDataGridViewTextBoxColumn3,
+            this.industryDataGridViewTextBoxColumn2,
+            this.employmentDataGridViewTextBoxColumn,
+            this.locationDataGridViewTextBoxColumn,
+            this.salaryDataGridViewTextBoxColumn,
+            this.scheduleDataGridViewTextBoxColumn});
+            this.dgvCompProf.DataSource = this.getCompanyProfBindingSource;
+            this.dgvCompProf.Location = new System.Drawing.Point(0, 120);
+            this.dgvCompProf.Name = "dgvCompProf";
+            this.dgvCompProf.Size = new System.Drawing.Size(858, 247);
+            this.dgvCompProf.TabIndex = 0;
+            // 
+            // companyNameDataGridViewTextBoxColumn1
+            // 
+            this.companyNameDataGridViewTextBoxColumn1.DataPropertyName = "CompanyName";
+            this.companyNameDataGridViewTextBoxColumn1.HeaderText = "Название компании";
+            this.companyNameDataGridViewTextBoxColumn1.Name = "companyNameDataGridViewTextBoxColumn1";
+            // 
+            // companyEmailDataGridViewTextBoxColumn1
+            // 
+            this.companyEmailDataGridViewTextBoxColumn1.DataPropertyName = "CompanyEmail";
+            this.companyEmailDataGridViewTextBoxColumn1.HeaderText = "Почта компании";
+            this.companyEmailDataGridViewTextBoxColumn1.Name = "companyEmailDataGridViewTextBoxColumn1";
+            // 
+            // companyPhoneDataGridViewTextBoxColumn1
+            // 
+            this.companyPhoneDataGridViewTextBoxColumn1.DataPropertyName = "CompanyPhone";
+            this.companyPhoneDataGridViewTextBoxColumn1.HeaderText = "Телефон компании";
+            this.companyPhoneDataGridViewTextBoxColumn1.Name = "companyPhoneDataGridViewTextBoxColumn1";
+            // 
+            // companySiteDataGridViewTextBoxColumn1
+            // 
+            this.companySiteDataGridViewTextBoxColumn1.DataPropertyName = "CompanySite";
+            this.companySiteDataGridViewTextBoxColumn1.HeaderText = "Сайт компании";
+            this.companySiteDataGridViewTextBoxColumn1.Name = "companySiteDataGridViewTextBoxColumn1";
+            // 
+            // jobNameDataGridViewTextBoxColumn2
+            // 
+            this.jobNameDataGridViewTextBoxColumn2.DataPropertyName = "JobName";
+            this.jobNameDataGridViewTextBoxColumn2.HeaderText = "Название профессии";
+            this.jobNameDataGridViewTextBoxColumn2.Name = "jobNameDataGridViewTextBoxColumn2";
+            // 
+            // currencyDataGridViewTextBoxColumn2
+            // 
+            this.currencyDataGridViewTextBoxColumn2.DataPropertyName = "Currency";
+            this.currencyDataGridViewTextBoxColumn2.HeaderText = "Валюта";
+            this.currencyDataGridViewTextBoxColumn2.Name = "currencyDataGridViewTextBoxColumn2";
+            // 
+            // educationDataGridViewTextBoxColumn3
+            // 
+            this.educationDataGridViewTextBoxColumn3.DataPropertyName = "Education";
+            this.educationDataGridViewTextBoxColumn3.HeaderText = "Образование";
+            this.educationDataGridViewTextBoxColumn3.Name = "educationDataGridViewTextBoxColumn3";
+            // 
+            // industryDataGridViewTextBoxColumn2
+            // 
+            this.industryDataGridViewTextBoxColumn2.DataPropertyName = "Industry";
+            this.industryDataGridViewTextBoxColumn2.HeaderText = "Направление";
+            this.industryDataGridViewTextBoxColumn2.Name = "industryDataGridViewTextBoxColumn2";
+            // 
+            // employmentDataGridViewTextBoxColumn
+            // 
+            this.employmentDataGridViewTextBoxColumn.DataPropertyName = "Employment";
+            this.employmentDataGridViewTextBoxColumn.HeaderText = "Занятость";
+            this.employmentDataGridViewTextBoxColumn.Name = "employmentDataGridViewTextBoxColumn";
+            // 
+            // locationDataGridViewTextBoxColumn
+            // 
+            this.locationDataGridViewTextBoxColumn.DataPropertyName = "Location";
+            this.locationDataGridViewTextBoxColumn.HeaderText = "Расположение";
+            this.locationDataGridViewTextBoxColumn.Name = "locationDataGridViewTextBoxColumn";
+            // 
+            // salaryDataGridViewTextBoxColumn
+            // 
+            this.salaryDataGridViewTextBoxColumn.DataPropertyName = "Salary";
+            this.salaryDataGridViewTextBoxColumn.HeaderText = "Оплата";
+            this.salaryDataGridViewTextBoxColumn.Name = "salaryDataGridViewTextBoxColumn";
+            // 
+            // scheduleDataGridViewTextBoxColumn
+            // 
+            this.scheduleDataGridViewTextBoxColumn.DataPropertyName = "Schedule";
+            this.scheduleDataGridViewTextBoxColumn.HeaderText = "График";
+            this.scheduleDataGridViewTextBoxColumn.Name = "scheduleDataGridViewTextBoxColumn";
+            // 
+            // getCompanyProfBindingSource
+            // 
+            this.getCompanyProfBindingSource.DataMember = "GetCompanyProf";
+            this.getCompanyProfBindingSource.DataSource = this.CompProfDataSet;
+            // 
+            // CompProfDataSet
+            // 
+            this.CompProfDataSet.DataSetName = "employeesDataSet7";
+            this.CompProfDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // sqlSelectCommand2
             // 
@@ -1237,15 +1490,6 @@ namespace lab2
             // 
             this.getEmployeeProfTableAdapter.ClearBeforeFill = true;
             // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(218, 27);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(65, 13);
-            this.label17.TabIndex = 4;
-            this.label17.Text = "Профессия";
-            // 
             // sqlSelectCommand5
             // 
             this.sqlSelectCommand5.CommandText = "dbo.GetCompanyProf";
@@ -1316,253 +1560,9 @@ namespace lab2
                         new System.Data.Common.DataColumnMapping("Schedule", "Schedule")})});
             this.sqlDataCompProf.UpdateCommand = this.sqlUpdateCommand5;
             // 
-            // dgvCompProf
-            // 
-            this.dgvCompProf.AutoGenerateColumns = false;
-            this.dgvCompProf.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCompProf.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.companyNameDataGridViewTextBoxColumn1,
-            this.companyEmailDataGridViewTextBoxColumn1,
-            this.companyPhoneDataGridViewTextBoxColumn1,
-            this.companySiteDataGridViewTextBoxColumn1,
-            this.jobNameDataGridViewTextBoxColumn2,
-            this.currencyDataGridViewTextBoxColumn2,
-            this.educationDataGridViewTextBoxColumn3,
-            this.industryDataGridViewTextBoxColumn2,
-            this.employmentDataGridViewTextBoxColumn,
-            this.locationDataGridViewTextBoxColumn,
-            this.salaryDataGridViewTextBoxColumn,
-            this.scheduleDataGridViewTextBoxColumn});
-            this.dgvCompProf.DataSource = this.getCompanyProfBindingSource;
-            this.dgvCompProf.Location = new System.Drawing.Point(0, 120);
-            this.dgvCompProf.Name = "dgvCompProf";
-            this.dgvCompProf.Size = new System.Drawing.Size(858, 247);
-            this.dgvCompProf.TabIndex = 0;
-            // 
-            // CompProfDataSet
-            // 
-            this.CompProfDataSet.DataSetName = "employeesDataSet7";
-            this.CompProfDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // getCompanyProfBindingSource
-            // 
-            this.getCompanyProfBindingSource.DataMember = "GetCompanyProf";
-            this.getCompanyProfBindingSource.DataSource = this.CompProfDataSet;
-            // 
             // getCompanyProfTableAdapter
             // 
             this.getCompanyProfTableAdapter.ClearBeforeFill = true;
-            // 
-            // companyNameDataGridViewTextBoxColumn1
-            // 
-            this.companyNameDataGridViewTextBoxColumn1.DataPropertyName = "CompanyName";
-            this.companyNameDataGridViewTextBoxColumn1.HeaderText = "Название компании";
-            this.companyNameDataGridViewTextBoxColumn1.Name = "companyNameDataGridViewTextBoxColumn1";
-            // 
-            // companyEmailDataGridViewTextBoxColumn1
-            // 
-            this.companyEmailDataGridViewTextBoxColumn1.DataPropertyName = "CompanyEmail";
-            this.companyEmailDataGridViewTextBoxColumn1.HeaderText = "Почта компании";
-            this.companyEmailDataGridViewTextBoxColumn1.Name = "companyEmailDataGridViewTextBoxColumn1";
-            // 
-            // companyPhoneDataGridViewTextBoxColumn1
-            // 
-            this.companyPhoneDataGridViewTextBoxColumn1.DataPropertyName = "CompanyPhone";
-            this.companyPhoneDataGridViewTextBoxColumn1.HeaderText = "Телефон компании";
-            this.companyPhoneDataGridViewTextBoxColumn1.Name = "companyPhoneDataGridViewTextBoxColumn1";
-            // 
-            // companySiteDataGridViewTextBoxColumn1
-            // 
-            this.companySiteDataGridViewTextBoxColumn1.DataPropertyName = "CompanySite";
-            this.companySiteDataGridViewTextBoxColumn1.HeaderText = "Сайт компании";
-            this.companySiteDataGridViewTextBoxColumn1.Name = "companySiteDataGridViewTextBoxColumn1";
-            // 
-            // jobNameDataGridViewTextBoxColumn2
-            // 
-            this.jobNameDataGridViewTextBoxColumn2.DataPropertyName = "JobName";
-            this.jobNameDataGridViewTextBoxColumn2.HeaderText = "Название профессии";
-            this.jobNameDataGridViewTextBoxColumn2.Name = "jobNameDataGridViewTextBoxColumn2";
-            // 
-            // currencyDataGridViewTextBoxColumn2
-            // 
-            this.currencyDataGridViewTextBoxColumn2.DataPropertyName = "Currency";
-            this.currencyDataGridViewTextBoxColumn2.HeaderText = "Валюта";
-            this.currencyDataGridViewTextBoxColumn2.Name = "currencyDataGridViewTextBoxColumn2";
-            // 
-            // educationDataGridViewTextBoxColumn3
-            // 
-            this.educationDataGridViewTextBoxColumn3.DataPropertyName = "Education";
-            this.educationDataGridViewTextBoxColumn3.HeaderText = "Образование";
-            this.educationDataGridViewTextBoxColumn3.Name = "educationDataGridViewTextBoxColumn3";
-            // 
-            // industryDataGridViewTextBoxColumn2
-            // 
-            this.industryDataGridViewTextBoxColumn2.DataPropertyName = "Industry";
-            this.industryDataGridViewTextBoxColumn2.HeaderText = "Направление";
-            this.industryDataGridViewTextBoxColumn2.Name = "industryDataGridViewTextBoxColumn2";
-            // 
-            // employmentDataGridViewTextBoxColumn
-            // 
-            this.employmentDataGridViewTextBoxColumn.DataPropertyName = "Employment";
-            this.employmentDataGridViewTextBoxColumn.HeaderText = "Занятость";
-            this.employmentDataGridViewTextBoxColumn.Name = "employmentDataGridViewTextBoxColumn";
-            // 
-            // locationDataGridViewTextBoxColumn
-            // 
-            this.locationDataGridViewTextBoxColumn.DataPropertyName = "Location";
-            this.locationDataGridViewTextBoxColumn.HeaderText = "Расположение";
-            this.locationDataGridViewTextBoxColumn.Name = "locationDataGridViewTextBoxColumn";
-            // 
-            // salaryDataGridViewTextBoxColumn
-            // 
-            this.salaryDataGridViewTextBoxColumn.DataPropertyName = "Salary";
-            this.salaryDataGridViewTextBoxColumn.HeaderText = "Оплата";
-            this.salaryDataGridViewTextBoxColumn.Name = "salaryDataGridViewTextBoxColumn";
-            // 
-            // scheduleDataGridViewTextBoxColumn
-            // 
-            this.scheduleDataGridViewTextBoxColumn.DataPropertyName = "Schedule";
-            this.scheduleDataGridViewTextBoxColumn.HeaderText = "График";
-            this.scheduleDataGridViewTextBoxColumn.Name = "scheduleDataGridViewTextBoxColumn";
-            // 
-            // cmdComp
-            // 
-            this.cmdComp.DataSource = this.getCompanyBindingSource;
-            this.cmdComp.DisplayMember = "CompanyName";
-            this.cmdComp.FormattingEnabled = true;
-            this.cmdComp.Location = new System.Drawing.Point(3, 55);
-            this.cmdComp.Name = "cmdComp";
-            this.cmdComp.Size = new System.Drawing.Size(121, 21);
-            this.cmdComp.TabIndex = 1;
-            this.cmdComp.ValueMember = "idCompany";
-            // 
-            // cmpProf
-            // 
-            this.cmpProf.DataSource = this.getProfessionBindingSource;
-            this.cmpProf.DisplayMember = "JobName";
-            this.cmpProf.FormattingEnabled = true;
-            this.cmpProf.Location = new System.Drawing.Point(142, 56);
-            this.cmpProf.Name = "cmpProf";
-            this.cmpProf.Size = new System.Drawing.Size(121, 21);
-            this.cmpProf.TabIndex = 2;
-            this.cmpProf.ValueMember = "id";
-            // 
-            // numSalComp
-            // 
-            this.numSalComp.Location = new System.Drawing.Point(283, 56);
-            this.numSalComp.Maximum = new decimal(new int[] {
-            150000,
-            0,
-            0,
-            0});
-            this.numSalComp.Minimum = new decimal(new int[] {
-            5000,
-            0,
-            0,
-            0});
-            this.numSalComp.Name = "numSalComp";
-            this.numSalComp.Size = new System.Drawing.Size(120, 20);
-            this.numSalComp.TabIndex = 3;
-            this.numSalComp.Value = new decimal(new int[] {
-            5000,
-            0,
-            0,
-            0});
-            // 
-            // cmbLoc
-            // 
-            this.cmbLoc.FormattingEnabled = true;
-            this.cmbLoc.Items.AddRange(new object[] {
-            "Иркусткая область",
-            "Московская область",
-            "Ленинградская область",
-            "Красноярский край",
-            "Калиниградская область",
-            "Новосибирская область"});
-            this.cmbLoc.Location = new System.Drawing.Point(439, 55);
-            this.cmbLoc.Name = "cmbLoc";
-            this.cmbLoc.Size = new System.Drawing.Size(121, 21);
-            this.cmbLoc.TabIndex = 4;
-            // 
-            // cmbSch
-            // 
-            this.cmbSch.FormattingEnabled = true;
-            this.cmbSch.Items.AddRange(new object[] {
-            "2/2",
-            "5/2",
-            "3/3",
-            "40/40",
-            "Свободный"});
-            this.cmbSch.Location = new System.Drawing.Point(587, 55);
-            this.cmbSch.Name = "cmbSch";
-            this.cmbSch.Size = new System.Drawing.Size(121, 21);
-            this.cmbSch.TabIndex = 5;
-            // 
-            // cmbEmpl
-            // 
-            this.cmbEmpl.FormattingEnabled = true;
-            this.cmbEmpl.Items.AddRange(new object[] {
-            "Полная ставка",
-            "Полставки",
-            "Четверть ставки"});
-            this.cmbEmpl.Location = new System.Drawing.Point(728, 55);
-            this.cmbEmpl.Name = "cmbEmpl";
-            this.cmbEmpl.Size = new System.Drawing.Size(121, 21);
-            this.cmbEmpl.TabIndex = 6;
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(16, 24);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(58, 13);
-            this.label18.TabIndex = 7;
-            this.label18.Text = "Компания";
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(154, 24);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(65, 13);
-            this.label19.TabIndex = 8;
-            this.label19.Text = "Профессия";
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(292, 24);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(44, 13);
-            this.label20.TabIndex = 9;
-            this.label20.Text = "Оплата";
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(454, 24);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(82, 13);
-            this.label21.TabIndex = 10;
-            this.label21.Text = "Расположение";
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(587, 24);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(45, 13);
-            this.label22.TabIndex = 11;
-            this.label22.Text = "График";
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(728, 24);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(60, 13);
-            this.label23.TabIndex = 12;
-            this.label23.Text = "Занятость";
             // 
             // Form1
             // 
@@ -1600,12 +1600,12 @@ namespace lab2
             ((System.ComponentModel.ISupportInitialize)(this.EmpProfDataSet)).EndInit();
             this.tabPage5.ResumeLayout(false);
             this.tabPage5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numSalComp)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCompProf)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.getCompanyProfBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CompProfDataSet)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCompProf)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CompProfDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.getCompanyProfBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numSalComp)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
