@@ -43,6 +43,7 @@ namespace lab2
             this.getProfessionTableAdapter.Fill(this.ProfDataSet.GetProfession);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "employeesDataSet1.GetEmployee". При необходимости она может быть перемещена или удалена.
             this.getEmployeeTableAdapter.Fill(this.employeesDataSet1.GetEmployee);
+            S1();
 
         }
 
@@ -53,6 +54,7 @@ namespace lab2
             sqlDataComp.Update(CompDataSet);
             sqlDataEmpProf.Update(EmpProfDataSet);
             sqlDataCompProf.Update(CompProfDataSet);
+            sqlDataS1.Update(employeesDataSet8);
         }
 
         public DataRow GetCurrentRow(DataGridView dg) {
@@ -385,5 +387,41 @@ namespace lab2
             }
         }
 
+        private void btnS1_Click(object sender, EventArgs e)
+        {
+            int id = Convert.ToInt32(cmbS1.SelectedValue.ToString());
+            try
+            {
+                if(searchFromProfTableAdapter.Fill(employeesDataSet8.SearchFromProf, id) == null)
+                {
+
+                }
+            }
+            catch(Exception ex)
+            {
+
+            }
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            S1();
+        }
+        private void S1()
+        {
+            try
+            {
+                lblErrorS1.Text = "";
+                int id = Convert.ToInt32(cmbS1.SelectedValue.ToString());
+                if (searchFromProfTableAdapter.Fill(employeesDataSet8.SearchFromProf, id) == null)
+                {
+                    lblErrorS1.Text = "По данному запросу нет совпадений";
+                }
+            }
+            catch (Exception ex)
+            {
+
+            }
+        }
     }
 }
