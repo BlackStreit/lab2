@@ -387,22 +387,6 @@ namespace lab2
             }
         }
 
-        private void btnS1_Click(object sender, EventArgs e)
-        {
-            int id = Convert.ToInt32(cmbS1.SelectedValue.ToString());
-            try
-            {
-                if(searchFromProfTableAdapter.Fill(employeesDataSet8.SearchFromProf, id) == null)
-                {
-
-                }
-            }
-            catch(Exception ex)
-            {
-
-            }
-        }
-
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             S1();
