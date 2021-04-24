@@ -99,6 +99,10 @@ namespace lab2
             this.getCompanyBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.CompDataSet = new lab2.employeesDataSet5();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.label24 = new System.Windows.Forms.Label();
+            this.cmbCompProf = new System.Windows.Forms.ComboBox();
+            this.getCompanyProfBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.CompProfDataSet = new lab2.employeesDataSet7();
             this.label17 = new System.Windows.Forms.Label();
             this.cmbProf = new System.Windows.Forms.ComboBox();
             this.label16 = new System.Windows.Forms.Label();
@@ -142,8 +146,38 @@ namespace lab2
             this.locationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.salaryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.scheduleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.getCompanyProfBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.CompProfDataSet = new lab2.employeesDataSet7();
+            this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.lblErrorS1 = new System.Windows.Forms.Label();
+            this.cmbS1 = new System.Windows.Forms.ComboBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.idDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.firstnameDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.secondnameDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lastnameDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.educationDataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.regionDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.jobNameDataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.industryDataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.currencyDataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.companyNameDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.companyPhoneDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.companySiteDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.companyEmailDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.searchFromProfBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.employeesDataSet9 = new lab2.employeesDataSet9();
+            this.tabPage7 = new System.Windows.Forms.TabPage();
+            this.nudCount = new System.Windows.Forms.NumericUpDown();
+            this.cmbS2 = new System.Windows.Forms.ComboBox();
+            this.btnS2 = new System.Windows.Forms.Button();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.companyNameDataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.companyEmailDataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.companyPhoneDataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.companySiteDataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.salaryDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.search2BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.employeesDataSet11 = new lab2.employeesDataSet11();
+            this.employeesDataSet8 = new lab2.employeesDataSet8();
             this.sqlSelectCommand2 = new System.Data.SqlClient.SqlCommand();
             this.sqlInsertCommand2 = new System.Data.SqlClient.SqlCommand();
             this.sqlUpdateCommand2 = new System.Data.SqlClient.SqlCommand();
@@ -156,6 +190,7 @@ namespace lab2
             this.tsbSearch = new System.Windows.Forms.ToolStripButton();
             this.tsbUpd = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.tsbSaveExcel = new System.Windows.Forms.ToolStripButton();
             this.sqlSelectCommand3 = new System.Data.SqlClient.SqlCommand();
             this.sqlInsertCommand3 = new System.Data.SqlClient.SqlCommand();
             this.sqlUpdateCommand3 = new System.Data.SqlClient.SqlCommand();
@@ -174,29 +209,14 @@ namespace lab2
             this.sqlDeleteCommand5 = new System.Data.SqlClient.SqlCommand();
             this.sqlDataCompProf = new System.Data.SqlClient.SqlDataAdapter();
             this.getCompanyProfTableAdapter = new lab2.employeesDataSet7TableAdapters.GetCompanyProfTableAdapter();
-            this.tabPage6 = new System.Windows.Forms.TabPage();
             this.sqlSelectCommand6 = new System.Data.SqlClient.SqlCommand();
             this.sqlDataS1 = new System.Data.SqlClient.SqlDataAdapter();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.employeesDataSet8 = new lab2.employeesDataSet8();
-            this.searchFromProfBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.searchFromProfTableAdapter = new lab2.employeesDataSet8TableAdapters.SearchFromProfTableAdapter();
-            this.cmbS1 = new System.Windows.Forms.ComboBox();
-            this.lblErrorS1 = new System.Windows.Forms.Label();
-            this.emlpoyeidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.firstnameDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.secondnameDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lastnameDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.educationDataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.regionDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.jobNameDataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.currencyDataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.industryDataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.education1DataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.companyNameDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.companyEmailDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.companyPhoneDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.companySiteDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.searchFromProfTableAdapter = new lab2.employeesDataSet9TableAdapters.SearchFromProfTableAdapter();
+            this.employeesDataSet10 = new lab2.employeesDataSet10();
+            this.sqlSelectCommand7 = new System.Data.SqlClient.SqlCommand();
+            this.sqlDataS2 = new System.Data.SqlClient.SqlDataAdapter();
+            this.search2TableAdapter = new lab2.employeesDataSet11TableAdapters.Search2TableAdapter();
+            this.tslReport = new System.Windows.Forms.ToolStripLabel();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmployee)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.getEmployeeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeesDataSet1)).BeginInit();
@@ -213,19 +233,26 @@ namespace lab2
             ((System.ComponentModel.ISupportInitialize)(this.getCompanyBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CompDataSet)).BeginInit();
             this.tabPage4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.getCompanyProfBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CompProfDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmpProf)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.getEmployeeProfBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.EmpProfDataSet)).BeginInit();
             this.tabPage5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numSalComp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCompProf)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.getCompanyProfBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CompProfDataSet)).BeginInit();
-            this.toolStrip1.SuspendLayout();
             this.tabPage6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.employeesDataSet8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchFromProfBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employeesDataSet9)).BeginInit();
+            this.tabPage7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudCount)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.search2BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employeesDataSet11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employeesDataSet8)).BeginInit();
+            this.toolStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.employeesDataSet10)).BeginInit();
             this.SuspendLayout();
             // 
             // sqlSelectCommand1
@@ -502,11 +529,13 @@ namespace lab2
             this.tbcDB.Controls.Add(this.tabPage4);
             this.tbcDB.Controls.Add(this.tabPage5);
             this.tbcDB.Controls.Add(this.tabPage6);
+            this.tbcDB.Controls.Add(this.tabPage7);
             this.tbcDB.Location = new System.Drawing.Point(12, 52);
             this.tbcDB.Name = "tbcDB";
             this.tbcDB.SelectedIndex = 0;
             this.tbcDB.Size = new System.Drawing.Size(874, 572);
             this.tbcDB.TabIndex = 18;
+            this.tbcDB.SelectedIndexChanged += new System.EventHandler(this.tbcDB_SelectedIndexChanged);
             // 
             // tabPage1
             // 
@@ -856,6 +885,8 @@ namespace lab2
             // 
             // tabPage4
             // 
+            this.tabPage4.Controls.Add(this.label24);
+            this.tabPage4.Controls.Add(this.cmbCompProf);
             this.tabPage4.Controls.Add(this.label17);
             this.tabPage4.Controls.Add(this.cmbProf);
             this.tabPage4.Controls.Add(this.label16);
@@ -869,10 +900,40 @@ namespace lab2
             this.tabPage4.Text = "Работники";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(389, 27);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(58, 13);
+            this.label24.TabIndex = 6;
+            this.label24.Text = "Компания";
+            // 
+            // cmbCompProf
+            // 
+            this.cmbCompProf.DataSource = this.getCompanyProfBindingSource;
+            this.cmbCompProf.DisplayMember = "CompanyName";
+            this.cmbCompProf.FormattingEnabled = true;
+            this.cmbCompProf.Location = new System.Drawing.Point(363, 54);
+            this.cmbCompProf.Name = "cmbCompProf";
+            this.cmbCompProf.Size = new System.Drawing.Size(121, 21);
+            this.cmbCompProf.TabIndex = 5;
+            this.cmbCompProf.ValueMember = "Company_idCompany";
+            // 
+            // getCompanyProfBindingSource
+            // 
+            this.getCompanyProfBindingSource.DataMember = "GetCompanyProf";
+            this.getCompanyProfBindingSource.DataSource = this.CompProfDataSet;
+            // 
+            // CompProfDataSet
+            // 
+            this.CompProfDataSet.DataSetName = "employeesDataSet7";
+            this.CompProfDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(218, 27);
+            this.label17.Location = new System.Drawing.Point(231, 28);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(65, 13);
             this.label17.TabIndex = 4;
@@ -880,14 +941,14 @@ namespace lab2
             // 
             // cmbProf
             // 
-            this.cmbProf.DataSource = this.getProfessionBindingSource;
+            this.cmbProf.DataSource = this.getCompanyProfBindingSource;
             this.cmbProf.DisplayMember = "JobName";
             this.cmbProf.FormattingEnabled = true;
             this.cmbProf.Location = new System.Drawing.Point(203, 55);
             this.cmbProf.Name = "cmbProf";
             this.cmbProf.Size = new System.Drawing.Size(121, 21);
             this.cmbProf.TabIndex = 3;
-            this.cmbProf.ValueMember = "id";
+            this.cmbProf.ValueMember = "Profession_id";
             // 
             // label16
             // 
@@ -1261,15 +1322,267 @@ namespace lab2
             this.scheduleDataGridViewTextBoxColumn.HeaderText = "График";
             this.scheduleDataGridViewTextBoxColumn.Name = "scheduleDataGridViewTextBoxColumn";
             // 
-            // getCompanyProfBindingSource
+            // tabPage6
             // 
-            this.getCompanyProfBindingSource.DataMember = "GetCompanyProf";
-            this.getCompanyProfBindingSource.DataSource = this.CompProfDataSet;
+            this.tabPage6.Controls.Add(this.lblErrorS1);
+            this.tabPage6.Controls.Add(this.cmbS1);
+            this.tabPage6.Controls.Add(this.dataGridView1);
+            this.tabPage6.Location = new System.Drawing.Point(4, 22);
+            this.tabPage6.Name = "tabPage6";
+            this.tabPage6.Size = new System.Drawing.Size(866, 546);
+            this.tabPage6.TabIndex = 5;
+            this.tabPage6.Tag = "5";
+            this.tabPage6.Text = "Поиск 1";
+            this.tabPage6.UseVisualStyleBackColor = true;
             // 
-            // CompProfDataSet
+            // lblErrorS1
             // 
-            this.CompProfDataSet.DataSetName = "employeesDataSet7";
-            this.CompProfDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.lblErrorS1.AutoSize = true;
+            this.lblErrorS1.Location = new System.Drawing.Point(310, 349);
+            this.lblErrorS1.Name = "lblErrorS1";
+            this.lblErrorS1.Size = new System.Drawing.Size(0, 13);
+            this.lblErrorS1.TabIndex = 3;
+            // 
+            // cmbS1
+            // 
+            this.cmbS1.DataSource = this.getProfessionBindingSource;
+            this.cmbS1.DisplayMember = "JobName";
+            this.cmbS1.FormattingEnabled = true;
+            this.cmbS1.Location = new System.Drawing.Point(106, 346);
+            this.cmbS1.Name = "cmbS1";
+            this.cmbS1.Size = new System.Drawing.Size(121, 21);
+            this.cmbS1.TabIndex = 1;
+            this.cmbS1.ValueMember = "id";
+            this.cmbS1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idDataGridViewTextBoxColumn2,
+            this.firstnameDataGridViewTextBoxColumn2,
+            this.secondnameDataGridViewTextBoxColumn2,
+            this.lastnameDataGridViewTextBoxColumn2,
+            this.educationDataGridViewTextBoxColumn4,
+            this.regionDataGridViewTextBoxColumn2,
+            this.jobNameDataGridViewTextBoxColumn3,
+            this.industryDataGridViewTextBoxColumn3,
+            this.currencyDataGridViewTextBoxColumn3,
+            this.companyNameDataGridViewTextBoxColumn2,
+            this.companyPhoneDataGridViewTextBoxColumn2,
+            this.companySiteDataGridViewTextBoxColumn2,
+            this.companyEmailDataGridViewTextBoxColumn2});
+            this.dataGridView1.DataSource = this.searchFromProfBindingSource;
+            this.dataGridView1.Location = new System.Drawing.Point(45, 36);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(744, 260);
+            this.dataGridView1.TabIndex = 0;
+            // 
+            // idDataGridViewTextBoxColumn2
+            // 
+            this.idDataGridViewTextBoxColumn2.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn2.HeaderText = "Паспорт";
+            this.idDataGridViewTextBoxColumn2.Name = "idDataGridViewTextBoxColumn2";
+            // 
+            // firstnameDataGridViewTextBoxColumn2
+            // 
+            this.firstnameDataGridViewTextBoxColumn2.DataPropertyName = "first_name";
+            this.firstnameDataGridViewTextBoxColumn2.HeaderText = "Имя";
+            this.firstnameDataGridViewTextBoxColumn2.Name = "firstnameDataGridViewTextBoxColumn2";
+            // 
+            // secondnameDataGridViewTextBoxColumn2
+            // 
+            this.secondnameDataGridViewTextBoxColumn2.DataPropertyName = "second_name";
+            this.secondnameDataGridViewTextBoxColumn2.HeaderText = "Отчество";
+            this.secondnameDataGridViewTextBoxColumn2.Name = "secondnameDataGridViewTextBoxColumn2";
+            // 
+            // lastnameDataGridViewTextBoxColumn2
+            // 
+            this.lastnameDataGridViewTextBoxColumn2.DataPropertyName = "last_name";
+            this.lastnameDataGridViewTextBoxColumn2.HeaderText = "Фамилия";
+            this.lastnameDataGridViewTextBoxColumn2.Name = "lastnameDataGridViewTextBoxColumn2";
+            // 
+            // educationDataGridViewTextBoxColumn4
+            // 
+            this.educationDataGridViewTextBoxColumn4.DataPropertyName = "education";
+            this.educationDataGridViewTextBoxColumn4.HeaderText = "Образование";
+            this.educationDataGridViewTextBoxColumn4.Name = "educationDataGridViewTextBoxColumn4";
+            // 
+            // regionDataGridViewTextBoxColumn2
+            // 
+            this.regionDataGridViewTextBoxColumn2.DataPropertyName = "region";
+            this.regionDataGridViewTextBoxColumn2.HeaderText = "Место жительства";
+            this.regionDataGridViewTextBoxColumn2.Name = "regionDataGridViewTextBoxColumn2";
+            // 
+            // jobNameDataGridViewTextBoxColumn3
+            // 
+            this.jobNameDataGridViewTextBoxColumn3.DataPropertyName = "JobName";
+            this.jobNameDataGridViewTextBoxColumn3.HeaderText = "Профессия";
+            this.jobNameDataGridViewTextBoxColumn3.Name = "jobNameDataGridViewTextBoxColumn3";
+            // 
+            // industryDataGridViewTextBoxColumn3
+            // 
+            this.industryDataGridViewTextBoxColumn3.DataPropertyName = "Industry";
+            this.industryDataGridViewTextBoxColumn3.HeaderText = "Направление";
+            this.industryDataGridViewTextBoxColumn3.Name = "industryDataGridViewTextBoxColumn3";
+            // 
+            // currencyDataGridViewTextBoxColumn3
+            // 
+            this.currencyDataGridViewTextBoxColumn3.DataPropertyName = "Currency";
+            this.currencyDataGridViewTextBoxColumn3.HeaderText = "Валюта";
+            this.currencyDataGridViewTextBoxColumn3.Name = "currencyDataGridViewTextBoxColumn3";
+            // 
+            // companyNameDataGridViewTextBoxColumn2
+            // 
+            this.companyNameDataGridViewTextBoxColumn2.DataPropertyName = "CompanyName";
+            this.companyNameDataGridViewTextBoxColumn2.HeaderText = "Компания";
+            this.companyNameDataGridViewTextBoxColumn2.Name = "companyNameDataGridViewTextBoxColumn2";
+            // 
+            // companyPhoneDataGridViewTextBoxColumn2
+            // 
+            this.companyPhoneDataGridViewTextBoxColumn2.DataPropertyName = "CompanyPhone";
+            this.companyPhoneDataGridViewTextBoxColumn2.HeaderText = "Телефон";
+            this.companyPhoneDataGridViewTextBoxColumn2.Name = "companyPhoneDataGridViewTextBoxColumn2";
+            // 
+            // companySiteDataGridViewTextBoxColumn2
+            // 
+            this.companySiteDataGridViewTextBoxColumn2.DataPropertyName = "CompanySite";
+            this.companySiteDataGridViewTextBoxColumn2.HeaderText = "Сайт";
+            this.companySiteDataGridViewTextBoxColumn2.Name = "companySiteDataGridViewTextBoxColumn2";
+            // 
+            // companyEmailDataGridViewTextBoxColumn2
+            // 
+            this.companyEmailDataGridViewTextBoxColumn2.DataPropertyName = "CompanyEmail";
+            this.companyEmailDataGridViewTextBoxColumn2.HeaderText = "Почта";
+            this.companyEmailDataGridViewTextBoxColumn2.Name = "companyEmailDataGridViewTextBoxColumn2";
+            // 
+            // searchFromProfBindingSource
+            // 
+            this.searchFromProfBindingSource.DataMember = "SearchFromProf";
+            this.searchFromProfBindingSource.DataSource = this.employeesDataSet9;
+            // 
+            // employeesDataSet9
+            // 
+            this.employeesDataSet9.DataSetName = "employeesDataSet9";
+            this.employeesDataSet9.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tabPage7
+            // 
+            this.tabPage7.Controls.Add(this.nudCount);
+            this.tabPage7.Controls.Add(this.cmbS2);
+            this.tabPage7.Controls.Add(this.btnS2);
+            this.tabPage7.Controls.Add(this.dataGridView2);
+            this.tabPage7.Location = new System.Drawing.Point(4, 22);
+            this.tabPage7.Name = "tabPage7";
+            this.tabPage7.Size = new System.Drawing.Size(866, 546);
+            this.tabPage7.TabIndex = 6;
+            this.tabPage7.Text = "Поиск 2";
+            this.tabPage7.UseVisualStyleBackColor = true;
+            // 
+            // nudCount
+            // 
+            this.nudCount.Location = new System.Drawing.Point(641, 111);
+            this.nudCount.Maximum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
+            this.nudCount.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.nudCount.Name = "nudCount";
+            this.nudCount.Size = new System.Drawing.Size(120, 20);
+            this.nudCount.TabIndex = 3;
+            this.nudCount.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // cmbS2
+            // 
+            this.cmbS2.DataSource = this.getProfessionBindingSource;
+            this.cmbS2.DisplayMember = "JobName";
+            this.cmbS2.FormattingEnabled = true;
+            this.cmbS2.Location = new System.Drawing.Point(641, 59);
+            this.cmbS2.Name = "cmbS2";
+            this.cmbS2.Size = new System.Drawing.Size(121, 21);
+            this.cmbS2.TabIndex = 2;
+            this.cmbS2.ValueMember = "id";
+            // 
+            // btnS2
+            // 
+            this.btnS2.Location = new System.Drawing.Point(651, 156);
+            this.btnS2.Name = "btnS2";
+            this.btnS2.Size = new System.Drawing.Size(101, 35);
+            this.btnS2.TabIndex = 1;
+            this.btnS2.Text = "Найти";
+            this.btnS2.UseVisualStyleBackColor = true;
+            this.btnS2.Click += new System.EventHandler(this.btnS2_Click);
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.AutoGenerateColumns = false;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.companyNameDataGridViewTextBoxColumn3,
+            this.companyEmailDataGridViewTextBoxColumn3,
+            this.companyPhoneDataGridViewTextBoxColumn3,
+            this.companySiteDataGridViewTextBoxColumn3,
+            this.salaryDataGridViewTextBoxColumn1});
+            this.dataGridView2.DataSource = this.search2BindingSource;
+            this.dataGridView2.Location = new System.Drawing.Point(42, 29);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.Size = new System.Drawing.Size(549, 325);
+            this.dataGridView2.TabIndex = 0;
+            // 
+            // companyNameDataGridViewTextBoxColumn3
+            // 
+            this.companyNameDataGridViewTextBoxColumn3.DataPropertyName = "CompanyName";
+            this.companyNameDataGridViewTextBoxColumn3.HeaderText = "Название компании";
+            this.companyNameDataGridViewTextBoxColumn3.Name = "companyNameDataGridViewTextBoxColumn3";
+            // 
+            // companyEmailDataGridViewTextBoxColumn3
+            // 
+            this.companyEmailDataGridViewTextBoxColumn3.DataPropertyName = "CompanyEmail";
+            this.companyEmailDataGridViewTextBoxColumn3.HeaderText = "Почта";
+            this.companyEmailDataGridViewTextBoxColumn3.Name = "companyEmailDataGridViewTextBoxColumn3";
+            // 
+            // companyPhoneDataGridViewTextBoxColumn3
+            // 
+            this.companyPhoneDataGridViewTextBoxColumn3.DataPropertyName = "CompanyPhone";
+            this.companyPhoneDataGridViewTextBoxColumn3.HeaderText = "Телефон";
+            this.companyPhoneDataGridViewTextBoxColumn3.Name = "companyPhoneDataGridViewTextBoxColumn3";
+            // 
+            // companySiteDataGridViewTextBoxColumn3
+            // 
+            this.companySiteDataGridViewTextBoxColumn3.DataPropertyName = "CompanySite";
+            this.companySiteDataGridViewTextBoxColumn3.HeaderText = "Сайт";
+            this.companySiteDataGridViewTextBoxColumn3.Name = "companySiteDataGridViewTextBoxColumn3";
+            // 
+            // salaryDataGridViewTextBoxColumn1
+            // 
+            this.salaryDataGridViewTextBoxColumn1.DataPropertyName = "Salary";
+            this.salaryDataGridViewTextBoxColumn1.HeaderText = "Оплата";
+            this.salaryDataGridViewTextBoxColumn1.Name = "salaryDataGridViewTextBoxColumn1";
+            // 
+            // search2BindingSource
+            // 
+            this.search2BindingSource.DataMember = "Search2";
+            this.search2BindingSource.DataSource = this.employeesDataSet11;
+            // 
+            // employeesDataSet11
+            // 
+            this.employeesDataSet11.DataSetName = "employeesDataSet11";
+            this.employeesDataSet11.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // employeesDataSet8
+            // 
+            this.employeesDataSet8.DataSetName = "employeesDataSet8";
+            this.employeesDataSet8.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // sqlSelectCommand2
             // 
@@ -1341,7 +1654,9 @@ namespace lab2
             this.tsbDel,
             this.tsbSearch,
             this.tsbUpd,
-            this.toolStripSeparator1});
+            this.toolStripSeparator1,
+            this.tsbSaveExcel,
+            this.tslReport});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(877, 25);
@@ -1393,6 +1708,16 @@ namespace lab2
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
+            // 
+            // tsbSaveExcel
+            // 
+            this.tsbSaveExcel.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.tsbSaveExcel.Image = ((System.Drawing.Image)(resources.GetObject("tsbSaveExcel.Image")));
+            this.tsbSaveExcel.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbSaveExcel.Name = "tsbSaveExcel";
+            this.tsbSaveExcel.Size = new System.Drawing.Size(69, 22);
+            this.tsbSaveExcel.Text = "Сохранить";
+            this.tsbSaveExcel.Click += new System.EventHandler(this.tsbSaveExcel_Click);
             // 
             // sqlSelectCommand3
             // 
@@ -1533,8 +1858,8 @@ namespace lab2
             this.sqlInsertCommand5.Connection = this.sqlConnection1;
             this.sqlInsertCommand5.Parameters.AddRange(new System.Data.SqlClient.SqlParameter[] {
             new System.Data.SqlClient.SqlParameter("@RETURN_VALUE", System.Data.SqlDbType.Int, 4, System.Data.ParameterDirection.ReturnValue, false, ((byte)(0)), ((byte)(0)), "", System.Data.DataRowVersion.Current, null),
-            new System.Data.SqlClient.SqlParameter("@idProf", System.Data.SqlDbType.Int, 4),
-            new System.Data.SqlClient.SqlParameter("@idComp", System.Data.SqlDbType.Int, 4),
+            new System.Data.SqlClient.SqlParameter("@idProf", System.Data.SqlDbType.Int, 4, "id"),
+            new System.Data.SqlClient.SqlParameter("@idComp", System.Data.SqlDbType.Int, 4, "id"),
             new System.Data.SqlClient.SqlParameter("@Salary", System.Data.SqlDbType.Int, 4, "Salary"),
             new System.Data.SqlClient.SqlParameter("@Schedule", System.Data.SqlDbType.VarChar, 20, "Schedule"),
             new System.Data.SqlClient.SqlParameter("@Employment", System.Data.SqlDbType.VarChar, 20, "Employment"),
@@ -1547,8 +1872,7 @@ namespace lab2
             this.sqlUpdateCommand5.Connection = this.sqlConnection1;
             this.sqlUpdateCommand5.Parameters.AddRange(new System.Data.SqlClient.SqlParameter[] {
             new System.Data.SqlClient.SqlParameter("@RETURN_VALUE", System.Data.SqlDbType.Int, 4, System.Data.ParameterDirection.ReturnValue, false, ((byte)(0)), ((byte)(0)), "", System.Data.DataRowVersion.Current, null),
-            new System.Data.SqlClient.SqlParameter("@CompId", System.Data.SqlDbType.Int, 4),
-            new System.Data.SqlClient.SqlParameter("@idProf", System.Data.SqlDbType.Int, 4),
+            new System.Data.SqlClient.SqlParameter("@id", System.Data.SqlDbType.Int, 4, "id"),
             new System.Data.SqlClient.SqlParameter("@Salary", System.Data.SqlDbType.Int, 4, "Salary"),
             new System.Data.SqlClient.SqlParameter("@Schedule", System.Data.SqlDbType.VarChar, 20, "Schedule"),
             new System.Data.SqlClient.SqlParameter("@Employment", System.Data.SqlDbType.VarChar, 20, "Employment"),
@@ -1561,8 +1885,7 @@ namespace lab2
             this.sqlDeleteCommand5.Connection = this.sqlConnection1;
             this.sqlDeleteCommand5.Parameters.AddRange(new System.Data.SqlClient.SqlParameter[] {
             new System.Data.SqlClient.SqlParameter("@RETURN_VALUE", System.Data.SqlDbType.Int, 4, System.Data.ParameterDirection.ReturnValue, false, ((byte)(0)), ((byte)(0)), "", System.Data.DataRowVersion.Current, null),
-            new System.Data.SqlClient.SqlParameter("@ProfId", System.Data.SqlDbType.Int, 4),
-            new System.Data.SqlClient.SqlParameter("@CompId", System.Data.SqlDbType.Int, 4)});
+            new System.Data.SqlClient.SqlParameter("@id", System.Data.SqlDbType.Int, 4, "id")});
             // 
             // sqlDataCompProf
             // 
@@ -1571,6 +1894,7 @@ namespace lab2
             this.sqlDataCompProf.SelectCommand = this.sqlSelectCommand5;
             this.sqlDataCompProf.TableMappings.AddRange(new System.Data.Common.DataTableMapping[] {
             new System.Data.Common.DataTableMapping("Table", "GetCompanyProf", new System.Data.Common.DataColumnMapping[] {
+                        new System.Data.Common.DataColumnMapping("id", "id"),
                         new System.Data.Common.DataColumnMapping("Company_idCompany", "Company_idCompany"),
                         new System.Data.Common.DataColumnMapping("Profession_id", "Profession_id"),
                         new System.Data.Common.DataColumnMapping("CompanyEmail", "CompanyEmail"),
@@ -1592,19 +1916,6 @@ namespace lab2
             // 
             this.getCompanyProfTableAdapter.ClearBeforeFill = true;
             // 
-            // tabPage6
-            // 
-            this.tabPage6.Controls.Add(this.lblErrorS1);
-            this.tabPage6.Controls.Add(this.cmbS1);
-            this.tabPage6.Controls.Add(this.dataGridView1);
-            this.tabPage6.Location = new System.Drawing.Point(4, 22);
-            this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Size = new System.Drawing.Size(866, 546);
-            this.tabPage6.TabIndex = 5;
-            this.tabPage6.Tag = "5";
-            this.tabPage6.Text = "Поиск 1";
-            this.tabPage6.UseVisualStyleBackColor = true;
-            // 
             // sqlSelectCommand6
             // 
             this.sqlSelectCommand6.CommandText = "dbo.SearchFromProf";
@@ -1619,8 +1930,6 @@ namespace lab2
             this.sqlDataS1.SelectCommand = this.sqlSelectCommand6;
             this.sqlDataS1.TableMappings.AddRange(new System.Data.Common.DataTableMapping[] {
             new System.Data.Common.DataTableMapping("Table", "SearchFromProf", new System.Data.Common.DataColumnMapping[] {
-                        new System.Data.Common.DataColumnMapping("Emlpoye_id", "Emlpoye_id"),
-                        new System.Data.Common.DataColumnMapping("Profession_id", "Profession_id"),
                         new System.Data.Common.DataColumnMapping("id", "id"),
                         new System.Data.Common.DataColumnMapping("first_name", "first_name"),
                         new System.Data.Common.DataColumnMapping("second_name", "second_name"),
@@ -1628,159 +1937,69 @@ namespace lab2
                         new System.Data.Common.DataColumnMapping("education", "education"),
                         new System.Data.Common.DataColumnMapping("region", "region"),
                         new System.Data.Common.DataColumnMapping("id1", "id1"),
+                        new System.Data.Common.DataColumnMapping("JobName", "JobName"),
+                        new System.Data.Common.DataColumnMapping("Industry", "Industry"),
+                        new System.Data.Common.DataColumnMapping("Currency", "Currency"),
+                        new System.Data.Common.DataColumnMapping("Education1", "Education1"),
+                        new System.Data.Common.DataColumnMapping("CompanyName", "CompanyName"),
+                        new System.Data.Common.DataColumnMapping("CompanyPhone", "CompanyPhone"),
+                        new System.Data.Common.DataColumnMapping("CompanySite", "CompanySite"),
+                        new System.Data.Common.DataColumnMapping("CompanyEmail", "CompanyEmail"),
+                        new System.Data.Common.DataColumnMapping("idCompany", "idCompany")})});
+            // 
+            // searchFromProfTableAdapter
+            // 
+            this.searchFromProfTableAdapter.ClearBeforeFill = true;
+            // 
+            // employeesDataSet10
+            // 
+            this.employeesDataSet10.DataSetName = "employeesDataSet10";
+            this.employeesDataSet10.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // sqlSelectCommand7
+            // 
+            this.sqlSelectCommand7.CommandText = "dbo.Search2";
+            this.sqlSelectCommand7.CommandType = System.Data.CommandType.StoredProcedure;
+            this.sqlSelectCommand7.Connection = this.sqlConnection1;
+            this.sqlSelectCommand7.Parameters.AddRange(new System.Data.SqlClient.SqlParameter[] {
+            new System.Data.SqlClient.SqlParameter("@RETURN_VALUE", System.Data.SqlDbType.Int, 4, System.Data.ParameterDirection.ReturnValue, false, ((byte)(0)), ((byte)(0)), "", System.Data.DataRowVersion.Current, null),
+            new System.Data.SqlClient.SqlParameter("@count", System.Data.SqlDbType.Int, 4),
+            new System.Data.SqlClient.SqlParameter("@idProf", System.Data.SqlDbType.Int, 4)});
+            // 
+            // sqlDataS2
+            // 
+            this.sqlDataS2.SelectCommand = this.sqlSelectCommand7;
+            this.sqlDataS2.TableMappings.AddRange(new System.Data.Common.DataTableMapping[] {
+            new System.Data.Common.DataTableMapping("Table", "Search2", new System.Data.Common.DataColumnMapping[] {
+                        new System.Data.Common.DataColumnMapping("id", "id"),
+                        new System.Data.Common.DataColumnMapping("Profession_id", "Profession_id"),
+                        new System.Data.Common.DataColumnMapping("Company_idCompany", "Company_idCompany"),
+                        new System.Data.Common.DataColumnMapping("Salary", "Salary"),
+                        new System.Data.Common.DataColumnMapping("Schedule", "Schedule"),
+                        new System.Data.Common.DataColumnMapping("Employment", "Employment"),
+                        new System.Data.Common.DataColumnMapping("Location", "Location"),
+                        new System.Data.Common.DataColumnMapping("id1", "id1"),
                         new System.Data.Common.DataColumnMapping("SalaryTotal", "SalaryTotal"),
                         new System.Data.Common.DataColumnMapping("Currency", "Currency"),
                         new System.Data.Common.DataColumnMapping("Industry", "Industry"),
                         new System.Data.Common.DataColumnMapping("JobName", "JobName"),
-                        new System.Data.Common.DataColumnMapping("Education1", "Education1"),
+                        new System.Data.Common.DataColumnMapping("Education", "Education"),
+                        new System.Data.Common.DataColumnMapping("Emlpoye_id", "Emlpoye_id"),
+                        new System.Data.Common.DataColumnMapping("Profession_id1", "Profession_id1"),
                         new System.Data.Common.DataColumnMapping("idCompany", "idCompany"),
                         new System.Data.Common.DataColumnMapping("CompanyEmail", "CompanyEmail"),
                         new System.Data.Common.DataColumnMapping("CompanyName", "CompanyName"),
                         new System.Data.Common.DataColumnMapping("CompanyPhone", "CompanyPhone"),
                         new System.Data.Common.DataColumnMapping("CompanySite", "CompanySite")})});
             // 
-            // dataGridView1
+            // search2TableAdapter
             // 
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.emlpoyeidDataGridViewTextBoxColumn,
-            this.firstnameDataGridViewTextBoxColumn2,
-            this.secondnameDataGridViewTextBoxColumn2,
-            this.lastnameDataGridViewTextBoxColumn2,
-            this.educationDataGridViewTextBoxColumn4,
-            this.regionDataGridViewTextBoxColumn2,
-            this.jobNameDataGridViewTextBoxColumn3,
-            this.currencyDataGridViewTextBoxColumn3,
-            this.industryDataGridViewTextBoxColumn3,
-            this.education1DataGridViewTextBoxColumn1,
-            this.companyNameDataGridViewTextBoxColumn2,
-            this.companyEmailDataGridViewTextBoxColumn2,
-            this.companyPhoneDataGridViewTextBoxColumn2,
-            this.companySiteDataGridViewTextBoxColumn2});
-            this.dataGridView1.DataSource = this.searchFromProfBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(45, 36);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(744, 260);
-            this.dataGridView1.TabIndex = 0;
+            this.search2TableAdapter.ClearBeforeFill = true;
             // 
-            // employeesDataSet8
+            // tslReport
             // 
-            this.employeesDataSet8.DataSetName = "employeesDataSet8";
-            this.employeesDataSet8.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // searchFromProfBindingSource
-            // 
-            this.searchFromProfBindingSource.DataMember = "SearchFromProf";
-            this.searchFromProfBindingSource.DataSource = this.employeesDataSet8;
-            // 
-            // searchFromProfTableAdapter
-            // 
-            this.searchFromProfTableAdapter.ClearBeforeFill = true;
-            // 
-            // cmbS1
-            // 
-            this.cmbS1.DataSource = this.getProfessionBindingSource;
-            this.cmbS1.DisplayMember = "JobName";
-            this.cmbS1.FormattingEnabled = true;
-            this.cmbS1.Location = new System.Drawing.Point(106, 346);
-            this.cmbS1.Name = "cmbS1";
-            this.cmbS1.Size = new System.Drawing.Size(121, 21);
-            this.cmbS1.TabIndex = 1;
-            this.cmbS1.ValueMember = "id";
-            this.cmbS1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
-            // 
-            // lblErrorS1
-            // 
-            this.lblErrorS1.AutoSize = true;
-            this.lblErrorS1.Location = new System.Drawing.Point(310, 349);
-            this.lblErrorS1.Name = "lblErrorS1";
-            this.lblErrorS1.Size = new System.Drawing.Size(0, 13);
-            this.lblErrorS1.TabIndex = 3;
-            // 
-            // emlpoyeidDataGridViewTextBoxColumn
-            // 
-            this.emlpoyeidDataGridViewTextBoxColumn.DataPropertyName = "Emlpoye_id";
-            this.emlpoyeidDataGridViewTextBoxColumn.HeaderText = "Паспорт";
-            this.emlpoyeidDataGridViewTextBoxColumn.Name = "emlpoyeidDataGridViewTextBoxColumn";
-            // 
-            // firstnameDataGridViewTextBoxColumn2
-            // 
-            this.firstnameDataGridViewTextBoxColumn2.DataPropertyName = "first_name";
-            this.firstnameDataGridViewTextBoxColumn2.HeaderText = "Имя";
-            this.firstnameDataGridViewTextBoxColumn2.Name = "firstnameDataGridViewTextBoxColumn2";
-            // 
-            // secondnameDataGridViewTextBoxColumn2
-            // 
-            this.secondnameDataGridViewTextBoxColumn2.DataPropertyName = "second_name";
-            this.secondnameDataGridViewTextBoxColumn2.HeaderText = "Отчетсво";
-            this.secondnameDataGridViewTextBoxColumn2.Name = "secondnameDataGridViewTextBoxColumn2";
-            // 
-            // lastnameDataGridViewTextBoxColumn2
-            // 
-            this.lastnameDataGridViewTextBoxColumn2.DataPropertyName = "last_name";
-            this.lastnameDataGridViewTextBoxColumn2.HeaderText = "Фамилия";
-            this.lastnameDataGridViewTextBoxColumn2.Name = "lastnameDataGridViewTextBoxColumn2";
-            // 
-            // educationDataGridViewTextBoxColumn4
-            // 
-            this.educationDataGridViewTextBoxColumn4.DataPropertyName = "education";
-            this.educationDataGridViewTextBoxColumn4.HeaderText = "Образование";
-            this.educationDataGridViewTextBoxColumn4.Name = "educationDataGridViewTextBoxColumn4";
-            // 
-            // regionDataGridViewTextBoxColumn2
-            // 
-            this.regionDataGridViewTextBoxColumn2.DataPropertyName = "region";
-            this.regionDataGridViewTextBoxColumn2.HeaderText = "Место жительства";
-            this.regionDataGridViewTextBoxColumn2.Name = "regionDataGridViewTextBoxColumn2";
-            // 
-            // jobNameDataGridViewTextBoxColumn3
-            // 
-            this.jobNameDataGridViewTextBoxColumn3.DataPropertyName = "JobName";
-            this.jobNameDataGridViewTextBoxColumn3.HeaderText = "Название профессии";
-            this.jobNameDataGridViewTextBoxColumn3.Name = "jobNameDataGridViewTextBoxColumn3";
-            // 
-            // currencyDataGridViewTextBoxColumn3
-            // 
-            this.currencyDataGridViewTextBoxColumn3.DataPropertyName = "Currency";
-            this.currencyDataGridViewTextBoxColumn3.HeaderText = "Валюта";
-            this.currencyDataGridViewTextBoxColumn3.Name = "currencyDataGridViewTextBoxColumn3";
-            // 
-            // industryDataGridViewTextBoxColumn3
-            // 
-            this.industryDataGridViewTextBoxColumn3.DataPropertyName = "Industry";
-            this.industryDataGridViewTextBoxColumn3.HeaderText = "Направление";
-            this.industryDataGridViewTextBoxColumn3.Name = "industryDataGridViewTextBoxColumn3";
-            // 
-            // education1DataGridViewTextBoxColumn1
-            // 
-            this.education1DataGridViewTextBoxColumn1.DataPropertyName = "Education1";
-            this.education1DataGridViewTextBoxColumn1.HeaderText = "Требование к образованию";
-            this.education1DataGridViewTextBoxColumn1.Name = "education1DataGridViewTextBoxColumn1";
-            // 
-            // companyNameDataGridViewTextBoxColumn2
-            // 
-            this.companyNameDataGridViewTextBoxColumn2.DataPropertyName = "CompanyName";
-            this.companyNameDataGridViewTextBoxColumn2.HeaderText = "Название компании";
-            this.companyNameDataGridViewTextBoxColumn2.Name = "companyNameDataGridViewTextBoxColumn2";
-            // 
-            // companyEmailDataGridViewTextBoxColumn2
-            // 
-            this.companyEmailDataGridViewTextBoxColumn2.DataPropertyName = "CompanyEmail";
-            this.companyEmailDataGridViewTextBoxColumn2.HeaderText = "Почта компании";
-            this.companyEmailDataGridViewTextBoxColumn2.Name = "companyEmailDataGridViewTextBoxColumn2";
-            // 
-            // companyPhoneDataGridViewTextBoxColumn2
-            // 
-            this.companyPhoneDataGridViewTextBoxColumn2.DataPropertyName = "CompanyPhone";
-            this.companyPhoneDataGridViewTextBoxColumn2.HeaderText = "Телефон компании";
-            this.companyPhoneDataGridViewTextBoxColumn2.Name = "companyPhoneDataGridViewTextBoxColumn2";
-            // 
-            // companySiteDataGridViewTextBoxColumn2
-            // 
-            this.companySiteDataGridViewTextBoxColumn2.DataPropertyName = "CompanySite";
-            this.companySiteDataGridViewTextBoxColumn2.HeaderText = "Сайт компании";
-            this.companySiteDataGridViewTextBoxColumn2.Name = "companySiteDataGridViewTextBoxColumn2";
+            this.tslReport.Name = "tslReport";
+            this.tslReport.Size = new System.Drawing.Size(0, 22);
             // 
             // Form1
             // 
@@ -1813,6 +2032,8 @@ namespace lab2
             ((System.ComponentModel.ISupportInitialize)(this.CompDataSet)).EndInit();
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.getCompanyProfBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CompProfDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmpProf)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.getEmployeeProfBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.EmpProfDataSet)).EndInit();
@@ -1820,15 +2041,20 @@ namespace lab2
             this.tabPage5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numSalComp)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCompProf)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.getCompanyProfBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CompProfDataSet)).EndInit();
-            this.toolStrip1.ResumeLayout(false);
-            this.toolStrip1.PerformLayout();
             this.tabPage6.ResumeLayout(false);
             this.tabPage6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.employeesDataSet8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchFromProfBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employeesDataSet9)).EndInit();
+            this.tabPage7.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.nudCount)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.search2BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employeesDataSet11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employeesDataSet8)).EndInit();
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.employeesDataSet10)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1981,27 +2207,47 @@ namespace lab2
         private System.Windows.Forms.ComboBox cmdComp;
         private System.Windows.Forms.TabPage tabPage6;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.BindingSource searchFromProfBindingSource;
         private employeesDataSet8 employeesDataSet8;
         private System.Data.SqlClient.SqlCommand sqlSelectCommand6;
         private System.Data.SqlClient.SqlDataAdapter sqlDataS1;
-        private employeesDataSet8TableAdapters.SearchFromProfTableAdapter searchFromProfTableAdapter;
         private System.Windows.Forms.ComboBox cmbS1;
         private System.Windows.Forms.Label lblErrorS1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn emlpoyeidDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.ComboBox cmbCompProf;
+        private System.Windows.Forms.BindingSource searchFromProfBindingSource;
+        private employeesDataSet9 employeesDataSet9;
+        private employeesDataSet9TableAdapters.SearchFromProfTableAdapter searchFromProfTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn firstnameDataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn secondnameDataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn lastnameDataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn educationDataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn regionDataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn jobNameDataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn currencyDataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn industryDataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn education1DataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn currencyDataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn companyNameDataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn companyEmailDataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn companyPhoneDataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn companySiteDataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn companyEmailDataGridViewTextBoxColumn2;
+        private System.Windows.Forms.TabPage tabPage7;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private employeesDataSet10 employeesDataSet10;
+        private System.Windows.Forms.NumericUpDown nudCount;
+        private System.Windows.Forms.ComboBox cmbS2;
+        private System.Windows.Forms.Button btnS2;
+        private System.Data.SqlClient.SqlCommand sqlSelectCommand7;
+        private System.Data.SqlClient.SqlDataAdapter sqlDataS2;
+        private System.Windows.Forms.BindingSource search2BindingSource;
+        private employeesDataSet11 employeesDataSet11;
+        private employeesDataSet11TableAdapters.Search2TableAdapter search2TableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn companyNameDataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn companyEmailDataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn companyPhoneDataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn companySiteDataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn salaryDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.ToolStripButton tsbSaveExcel;
+        private System.Windows.Forms.ToolStripLabel tslReport;
     }
 }
 

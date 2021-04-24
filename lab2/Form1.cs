@@ -1,23 +1,87 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Excel = Microsoft.Office.Interop.Excel;
+
+
 
 namespace lab2
 {
     public partial class Form1 : Form
     {
+        private Excel.Application excelapp;
+        private Excel.Workbooks excelappworkbooks;
+        private Excel.Workbook excelappworkbook;
+        private Excel.Sheets excelsheets;
+        private Excel.Worksheet excelworksheet;
+        private Excel.Range excelcells;
+
+
         public Form1()
         {
             InitializeComponent();
             UpdateCombos();
         }
 
+        void AsyncExcel(Dictionary<string, DataGridView> dataGridViews)
+        {
+            int i = 1;
+            foreach (var dgv in dataGridViews)
+            {
+                var table = dgv.Value;
+                var countColumns = table.Columns.Count;
+                var countRows = table.Rows.Count;
+                excelworksheet = excelappworkbook.Worksheets[i];
+                char index = 'A';
+                for (int j = 0; j < countColumns; j++)
+                {
+                    string cell = index + (1).ToString();
+                    excelcells = excelworksheet.get_Range(cell, Type.Missing);
+                    excelcells.set_Value(Type.Missing, table.Columns[j].HeaderText.ToString());
+                    index++;
+                }
+                for (int j = 0; j < countRows; j++) { 
+                    index = 'A';
+                    for (int k = 0; k < countColumns; k++)
+                    {
+                        string cell = index + (j + 2).ToString();
+                        excelcells = excelworksheet.get_Range(cell, Type.Missing);
+                        if (j == 0)
+                        {
+                            excelcells.set_Value(Type.Missing, table.Columns[k].HeaderText.ToString());
+                        }
+                        excelcells.set_Value(Type.Missing, table[k, j].Value);
+                        index++;
+                    }
+                }
+                i++;
+            }
+
+            //Сохраняем книгу 1
+            excelappworkbook.Save();
+        }
+
+        async void Excel()
+        {
+            Dictionary<string, DataGridView> dataGridViews = new Dictionary<string, DataGridView>();
+            dataGridViews.Add("Люди", dgvEmployee);
+            dataGridViews.Add("Профессии", dgvProf);
+            dataGridViews.Add("Компании", dgvComp);
+            dataGridViews.Add("Работники", dgvEmpProf);
+            dataGridViews.Add("Работа", dgvCompProf);
+            excelapp = new Excel.Application();
+            excelapp.SheetsInNewWorkbook = 5;
+            excelapp.Workbooks.Add(Type.Missing);
+            excelapp.DisplayAlerts = true;
+            excelappworkbooks = excelapp.Workbooks;
+            excelappworkbook = excelappworkbooks[1];
+            excelapp.DisplayAlerts = true;
+            await Task.Run(() => AsyncExcel(dataGridViews));
+            excelapp.Visible = true;
+            //excelapp.Quit();
+        }
         private void UpdateCombos()
         {
             cmbEdu.Text = cmbEdu.Items[0].ToString();
@@ -43,8 +107,6 @@ namespace lab2
             this.getProfessionTableAdapter.Fill(this.ProfDataSet.GetProfession);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "employeesDataSet1.GetEmployee". При необходимости она может быть перемещена или удалена.
             this.getEmployeeTableAdapter.Fill(this.employeesDataSet1.GetEmployee);
-            S1();
-
         }
 
         private void Form1_Deactivate(object sender, EventArgs e)
@@ -55,6 +117,7 @@ namespace lab2
             sqlDataEmpProf.Update(EmpProfDataSet);
             sqlDataCompProf.Update(CompProfDataSet);
             sqlDataS1.Update(employeesDataSet8);
+            sqlDataS2.Update(employeesDataSet10); 
         }
 
         public DataRow GetCurrentRow(DataGridView dg) {
@@ -189,10 +252,8 @@ namespace lab2
                     case 4:
                         {
                             DataRow row = GetCurrentRow(dgvCompProf);
-                            int Id = (int)row["Profession_id"];
-                            int IdComp = (int)row["Company_idCompany"];
-                            sqlDeleteCommand5.Parameters["@ProfId"].Value = Id;
-                            sqlDeleteCommand5.Parameters["@CompId"].Value = IdComp;
+                            int Id = (int)row["id"];
+                            sqlDeleteCommand5.Parameters["@id"].Value = Id;
                             sqlDeleteCommand5.ExecuteNonQuery();
                             this.getCompanyProfTableAdapter.Fill(this.CompProfDataSet.GetCompanyProf);
                         }
@@ -292,8 +353,7 @@ namespace lab2
                 switch (Convert.ToInt32(tbcDB.SelectedTab.Tag))
                 {
                     case 0:
-                        {
-                            this.getEmployeeTableAdapter.Fill(this.employeesDataSet1.GetEmployee);
+                        {                         
                             DataRow row = GetCurrentRow(dgvEmployee);
                             int Id = (int)row["id"];
                             sqlUpdateCommand1.Parameters["@id"].Value = Convert.ToInt32(mtbPassport.Text);
@@ -360,10 +420,8 @@ namespace lab2
                     case 4:
                         {
                             DataRow row = GetCurrentRow(dgvCompProf);
-                            int Id = (int)row["Profession_id"];
-                            int IdComp = (int)row["Company_idCompany"];
-                            sqlUpdateCommand5.Parameters["@idProf"].Value = Id;
-                            sqlUpdateCommand5.Parameters["@CompId"].Value = IdComp;
+                            int Id = (int)row["id"];
+                            sqlUpdateCommand5.Parameters["@id"].Value = Id;
                             sqlUpdateCommand5.Parameters["@Salary"].Value = (int)numSalComp.Value;
                             sqlUpdateCommand5.Parameters["@Schedule"].Value = cmbSch.Text;
                             sqlUpdateCommand5.Parameters["@Employment"].Value = cmbEmpl.Text;
@@ -389,15 +447,30 @@ namespace lab2
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            S1();
+            try
+            {
+                S1();
+            }
+            catch(Exception ex)
+            {
+
+            }
         }
         private void S1()
         {
             try
             {
                 lblErrorS1.Text = "";
-                int id = Convert.ToInt32(cmbS1.SelectedValue.ToString());
-                if (searchFromProfTableAdapter.Fill(employeesDataSet8.SearchFromProf, id) == null)
+                int id = 0;
+                try
+                {
+                    id = Convert.ToInt32(cmbS1.SelectedValue.ToString());
+                }
+                catch(Exception ex1)
+                {
+                    return;
+                }
+                if (searchFromProfTableAdapter.Fill(employeesDataSet9.SearchFromProf, id) == null)
                 {
                     lblErrorS1.Text = "По данному запросу нет совпадений";
                 }
@@ -406,6 +479,39 @@ namespace lab2
             {
 
             }
+        }
+
+        private void btnS2_Click(object sender, EventArgs e)
+        {
+            S2();
+        }
+        void S2()
+        {
+            try
+            {
+                int id = Convert.ToInt32(cmbS2.SelectedValue.ToString());
+                int count = (int)nudCount.Value;
+                search2TableAdapter.Fill(employeesDataSet11.Search2, count, id);
+            }
+            catch (Exception ex)
+            {
+
+            }
+        }
+
+        private void tbcDB_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(Convert.ToInt32(tbcDB.SelectedTab.Tag) == 5)
+            {
+                S1();
+            }
+        }
+
+        private void tsbSaveExcel_Click(object sender, EventArgs e)
+        {
+            tslReport.Text = "Сохраняю файл...";
+            Excel();
+            tslReport.Text = "Файл сохранен";
         }
     }
 }
